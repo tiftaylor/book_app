@@ -15,12 +15,17 @@ const app = express();
 // ================= Express Configs ====================//
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
+app.use(express.urlencoded({extended: true}));
+
 
 // ===================== Routes ======================= //
 app.get('/', (req, res) => {
   res.render('pages/index');
 })
 
+app.get('/searches/new', (req, res) => {
+  res.render('searches/new')
+})
 
 // ========================== Route Handlers ============================ //
 

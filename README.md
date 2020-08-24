@@ -2,7 +2,7 @@
 
 **Author**: Tif Taylor  
 **Version**: 1.0.0  
-**Heroku URL**: []()
+**Heroku URL**: [https://tiftaylor-booklist.herokuapp.com/](https://tiftaylor-booklist.herokuapp.com/)
 
 
 ## Overview
@@ -20,6 +20,7 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 
 
 ## Change Log
+08-24-2020 4:30pm - Set up form for search page
 08-24-2020 4:00pm - Connected to server, set up index and base css, installed pkgs, set up Heroku
 08-24-2020 3:00pm - GitHub Repo Established and base files scaffolded   
 
@@ -36,8 +37,8 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 
 >Number and Name of Feature: #2 Lab 11 | Search the API  
 >Estimated time to complete: 1 hour    
->Start time: ?? PM | End time: ?? PM    
->Actual time needed to complete:  
+>Start time: 4:00 PM | End time: 4:30 PM    
+>Actual time needed to complete: 30 minutes 
 
 >Number and Name of Feature: #3 Lab 11 | Browse search results    
 >Estimated time to complete: 1 hour      
