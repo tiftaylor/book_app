@@ -14,12 +14,12 @@
 
   <h2>Search By Title or Author</h2>
 
-  <form action="/searches/new">
+  <form action="/searches" method="POST">
     <input type="text" name="inputText" placeholder="Enter a title or author">
     <label for="title">Title</label>
-    <input type="radio" name="searchType" id="title">
+    <input type="radio" name="searchType" id="title" value="title" checked>
     <label for="author">Author</label>
-    <input type="radio" name="searchType" id="author">
+    <input type="radio" name="searchType" id="author" value="author">
     <input type="submit" value="Search the Google Books API">
   </form>
   
