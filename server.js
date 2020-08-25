@@ -26,6 +26,7 @@ app.post('/searches', searchResults);
 // ========================== Route Handlers ============================ //
 function homePage (req, res) {
   res.render('pages/index');
+
 };
 
 
@@ -56,6 +57,7 @@ function searchResults (req, res) {
         bookArray: resultBodyItems.map(objInArray => new Book(objInArray))
       });
     })
+    .catch(error => errorHandler(error, res));
 }
 
 
@@ -72,6 +74,14 @@ function Book(obj) {
   this.imgURL = imgURL;
   this.isbn = obj.volumeInfo.industryIdentifiers;
   this.bookshelf = obj.volumeInfo.categories;
+};
+
+
+function errorHandler(error, res) {
+  res.status(500).render('pages/error', {
+    status: error.status,
+    message: error.message
+  });
 };
 
 
