@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+main {
+  text-align: center;
+  flex: 1;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+form > * {
+  width: 80%;
+  margin-bottom: 25px;
+}
+
+
+input[type="radio"] {
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+
+form > div {
+  text-align: left;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

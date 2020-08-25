@@ -1,7 +1,7 @@
 # Search Google Books App | Lab 11 - 14 | Code Fellows 301
 
 **Author**: Tif Taylor  
-**Version**: 1.2.0  
+**Version**: 1.6.0  
 **Heroku URL**: [https://tiftaylor-booklist.herokuapp.com/](https://tiftaylor-booklist.herokuapp.com/)
 
 
@@ -20,15 +20,17 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 
 
 ## Change Log
-08-24-2020 9:20pm - Added catch for error of app
-08-24-2020 7:20pm - Sucessfully render search results from API  
-08-24-2020 4:30pm - Set up form for search page
-08-24-2020 4:00pm - Connected to server, set up index and base css, installed pkgs, set up Heroku
-08-24-2020 3:00pm - GitHub Repo Established and base files scaffolded   
+08-24-2020 11:30pm - Added CSS & index.ejs is homepage via "/"  
+08-24-2020 9:20pm - Added catch for error of app  
+08-24-2020 7:20pm - Sucessfully render search results from API    
+08-24-2020 4:30pm - Set up form for search page  
+08-24-2020 4:00pm - Connected to server, set up index and base css, installed pkgs, set up Heroku  
+08-24-2020 3:00pm - GitHub Repo Established and base files scaffolded     
 
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 - For solving the http to https I used this [StackOverflow Post](https://stackoverflow.com/questions/5491196/rewriting-http-url-to-https-using-regular-expression-and-javascript/5491311)
+- To help understand sticky footer, I used this persons [notes](https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/) on github
 
 
 ## User Acceptence Time Estimate Tests
@@ -52,12 +54,12 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 >Start time: 9:00 PM | End time: 9:20 PM    
 >Actual time needed to complete: 20 minutes
 
->Number and Name of Feature: #5 Lab 11 | Clean up UI
->Estimated time to complete: 1 hour     
->Start time: 9:20 PM | End time: ?? PM      
->Actual time needed to complete:  
+>Number and Name of Feature: #5 Lab 11 | Clean up UI  
+>Estimated time to complete: 1 hour       
+>Start time: 9:20 PM | End time: 11:30 PM        
+>Actual time needed to complete:  2 hours  
 
->Number and Name of Feature: #6 Lab 11 | Create index.ejs Homepage 
->Estimated time to complete: 15 minutes       
->Start time: ?? PM | End time: ?? PM        
->Actual time needed to complete:   
+>Number and Name of Feature: #6 Lab 11 | Create index.ejs Homepage   
+>Estimated time to complete: 5 minutes         
+>Start time: 11:30 PM | End time: 11:35 PM          
+>Actual time needed to complete: 5 minutes    

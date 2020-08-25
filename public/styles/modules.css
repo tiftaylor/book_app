@@ -1,0 +1,111 @@
+body {
+  background-color: snow;
+}
+
+main {
+  background-color: rgb(136, 152, 168);
+}
+
+header {
+  background-color: darkslategray;
+  padding: 2rem 0;
+} 
+
+header h1 {
+  font-size: 1.7rem;
+  margin-left: 20px;
+}
+
+header a {
+   color: white;
+   text-decoration: none;
+}
+
+header ul {
+  margin-right: 20px;
+  font-size: 1.4rem;
+}
+
+.sub-header {
+  background-color: gray;
+  padding: 1.2rem 0;
+}
+
+input {
+  height: 45px;
+}
+
+div > h2 {
+  font-size: 1.5em;
+}
+
+form div {
+  background-color: lightgray;
+  
+}
+
+input[type="text"]{
+  margin-top: 25px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  padding-left: 15px;
+}
+
+form > * {
+  border-radius: 3px;
+}
+
+form > div > label {
+  margin-left: 15px;
+  width: 60px;
+  display: inline-block;
+  color: black;
+}
+
+input[type="submit"]{
+  background-color: darkslategray;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+}
+
+footer {
+  background-color: darkslategray;
+}
+
+footer ul {
+  height: 2rem;
+}
+
+footer ul li {
+  margin: 0 25px;
+}
+
+.resultBox {
+  box-sizing: border-box;
+  background-color: lightgray;
+  width: 85%;
+  margin-top: 2rem;
+  padding: 2rem 3rem;
+  border-radius: 3px;
+  box-shadow: 0 0 5px darkslategray;
+  color: black;
+  line-height: 1.4rem;
+}
+
+.resultBox h3 {
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px darkslategray;
+}
+
+.resultBox p {
+  margin-top: 15px;
+}
+
+.resultBox img {
+  border: 5px solid white;
+  width: 50%;
+}
