@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Results</title>
+
+</head>
+
+<body>
+  
+  <h1>This is the show.ejs File!</h1>
+
+
+  <div>
+    <% for (book of bookArray) { %>
+      <img src="<%= book.imgURL %>" alt="">
+      <h3><%= book.title %></h3>
+      <p><%= book.author %></p>
+      <p><%= book.summary %></p>
+    <% } %>
+  </div>
+
+
+
+</body>
+</html>
