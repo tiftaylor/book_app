@@ -54,7 +54,7 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 
 >Number and Name of Feature: #5 Lab 11 | Clean up UI
 >Estimated time to complete: 1 hour     
->Start time: ?? PM | End time: ?? PM      
+>Start time: 9:20 PM | End time: ?? PM      
 >Actual time needed to complete:  
 
 >Number and Name of Feature: #6 Lab 11 | Create index.ejs Homepage 
