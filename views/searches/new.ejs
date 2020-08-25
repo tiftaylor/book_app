@@ -5,25 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Search</title>
 
+  <link rel="stylesheet" href="../styles/reset.css">
   <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/modules.css">
 
 </head>
 
 <body>
-  <h1>This is the new.ejs file</h1>
-
-  <h2>Search By Title or Author</h2>
-
-  <form action="/searches" method="POST">
-    <input type="text" name="inputText" placeholder="Enter a title or author">
-    <label for="title">Title</label>
-    <input type="radio" name="searchType" id="title" value="title" checked>
-    <label for="author">Author</label>
-    <input type="radio" name="searchType" id="author" value="author">
-    <input type="submit" value="Search the Google Books API">
-  </form>
+  
+  <header>
+    <nav>
+      <h1> <a href="/">Best Books!</a></h1>
+      <ul>
+        <li><a href="/searches/new">New Search</a></li>
+      </ul>
+    </nav>
+    
+  </header>
   
 
+  <main>
+    
+    <div class="sub-header">
+      <h2>Search By Title or Author</h2>
+    </div>
+    
+
+    <form action="/searches" method="POST">
+      <input type="text" name="inputText" placeholder="Enter a title or author">
+
+      <div>
+        <label for="title">Title</label>
+        <input type="radio" name="searchType" id="title" value="title" checked>
+      </div>
+      
+      <div>
+        <label for="author">Author</label>
+        <input type="radio" name="searchType" id="author" value="author">
+      </div>
+      
+      <input type="submit" value="Search the Google Books API">
+    </form>
+  </main>
+  
+  <footer>
+    <ul>
+      <li>x</li>
+      <li>x</li>
+      <li>x</li>
+      <li>x</li>
+    </ul>
+  </footer>
 
 </body>
 </html>
