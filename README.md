@@ -20,6 +20,7 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 
 
 ## Change Log
+08-24-2020 9:20pm - Added catch for error of app
 08-24-2020 7:20pm - Sucessfully render search results from API  
 08-24-2020 4:30pm - Set up form for search page
 08-24-2020 4:00pm - Connected to server, set up index and base css, installed pkgs, set up Heroku
@@ -48,8 +49,8 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 
 >Number and Name of Feature: #4 Lab 11 | Error messages 
 >Estimated time to complete: 15 minutes    
->Start time: ?? PM | End time: ?? PM    
->Actual time needed to complete: 
+>Start time: 9:00 PM | End time: 9:20 PM    
+>Actual time needed to complete: 20 minutes
 
 >Number and Name of Feature: #5 Lab 11 | Clean up UI
 >Estimated time to complete: 1 hour     
