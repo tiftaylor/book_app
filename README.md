@@ -1,7 +1,7 @@
 # Search Google Books App | Lab 11 - 14 | Code Fellows 301
 
 **Author**: Tif Taylor  
-**Version**: 1.6.0  
+**Version**: 2.2.0  
 **Heroku URL**: [https://tiftaylor-booklist.herokuapp.com/](https://tiftaylor-booklist.herokuapp.com/)
 
 
@@ -28,7 +28,8 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 
 
 ## Change Log
-08-25-2020 ??pm - ?? 
+08-25-2020 7:00pm - View Details functionaity, path and render  
+08-25-2020 6:20pm - Saved Books Query & Render 
 08-24-2020 11:30pm - Added CSS & index.ejs is homepage via "/"  
 08-24-2020 9:20pm - Added catch for error of app  
 08-24-2020 7:20pm - Sucessfully render search results from API    
@@ -73,7 +74,12 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 >Start time: 11:30 PM | End time: 11:35 PM          
 >Actual time needed to complete: 5 minutes    
 
->Number and Name of Feature: #1 Lab 12 | ??  
->Estimated time to complete: 45 minutes         
->Start time: ?? PM | End time: ?? PM          
->Actual time needed to complete: 
+>Number and Name of Feature: #1 Lab 12 | Saved Books Query & Render  
+>Estimated time to complete: 45 minutes           
+>Start time: 5:20 PM | End time: 6:20 PM            
+>Actual time needed to complete: 1 hour  
+
+>Number and Name of Feature: #2 Lab 12 | View Details Functionality    
+>Estimated time to complete: 2 hours               
+>Start time: 6:30 PM | End time: 7:00 PM                
+>Actual time needed to complete: 30 minutes    
