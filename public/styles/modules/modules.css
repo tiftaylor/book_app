@@ -1,0 +1,37 @@
+body {
+  background-color: snow;
+}
+
+main {
+  background-color: #e7fcfc;
+}
+
+.sub-header {
+  background-color: #4a9699;
+  padding: 1.2rem 0;
+}
+
+input {
+  height: 45px;
+}
+
+div > h2 {
+  font-size: 1.5em;
+}
+
+input[type="submit"]{
+  background-color: #4a9699;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #306668;
+}
+
+input[type="submit"]:active {
+  background-color: #306668;
+  opacity: 0.8;
+}

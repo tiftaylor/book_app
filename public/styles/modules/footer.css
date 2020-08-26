@@ -1,0 +1,11 @@
+footer {
+  background-color: #1e2c2c;
+}
+
+footer ul {
+  height: 2rem;
+}
+
+footer ul li {
+  margin: 0 25px;
+}

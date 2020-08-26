@@ -1,12 +1,13 @@
 # Search Google Books App | Lab 11 - 14 | Code Fellows 301
 
 **Author**: Tif Taylor  
-**Version**: 2.2.0  
+**Version**: 2.5.0  
 **Heroku URL**: [https://tiftaylor-booklist.herokuapp.com/](https://tiftaylor-booklist.herokuapp.com/)
 
 
 ## Overview
 For Code Fellows 301 Week 3, we are creating a mobile first, full-stack application that searches Google's books API. It includes the ability to search the Google Books API, add books to a database, and render the books from a PostgreSQL database to the client. It will also have the ability to update details of a book or remove it from a collection.
+
 
 ## Getting Started
 - Create your own GitHub Repo and build out the base files seen in this repo such as the .env, .gitignore, etc.
@@ -18,6 +19,7 @@ For Code Fellows 301 Week 3, we are creating a mobile first, full-stack applicat
 ## Architecture
 HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google Books API
 
+
 **schema.sql** | Table name: books
   - id - serial primary key
   - author - author name
@@ -28,6 +30,7 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 
 
 ## Change Log
+08-25-2020 10:00pm - Added CSS, including hamburger and final touches
 08-25-2020 8:15pm - Cleaned up code and added Partials via Layout dir
 08-25-2020 8:00pm - Ability to save a book to their local db 
 08-25-2020 7:00pm - View Details functionaity, path and render  
@@ -39,11 +42,14 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 08-24-2020 4:00pm - Connected to server, set up index and base css, installed pkgs, set up Heroku  
 08-24-2020 3:00pm - GitHub Repo Established and base files scaffolded     
 
+
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 - For solving the http to https I used this [StackOverflow Post](https://stackoverflow.com/questions/5491196/rewriting-http-url-to-https-using-regular-expression-and-javascript/5491311)
 - To help understand sticky footer, I used this persons [notes](https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/) on github
 - To grab the newest ID to load the result saved from the database, I used this [documentation](https://www.postgresql.org/docs/9.6/dml-returning.html) about RETURNING   
+- Bulk of Hamburger specific CSS credit: [Erik Terwan](https://codepen.io/erikterwan/pen/EVzeRP). However, I did a lot of manual adjusting for my app use like removing his animation, adjusting positioning to suit my app, etc. 
+- Button transition animation I used [this SO post](https://stackoverflow.com/questions/9670075/css-transition-shorthand-with-multiple-properties)  
 
 
 ## User Acceptence Time Estimate Tests
@@ -96,3 +102,8 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 >Estimated time to complete: 30 minutes                     
 >Start time: 8:00 PM | End time: 8:15 PM                      
 >Actual time needed to complete: 15 minutes   
+
+>Number and Name of Feature: #5 Lab 12 | Cleanup & Layout            
+>Estimated time to complete: 30 minutes                       
+>Start time: 8:15 PM | End time: 10:15 PM                          
+>Actual time needed to complete: 2 hours     
