@@ -18,8 +18,17 @@ For Code Fellows 301 Week 3, we are creating a mobile first, full-stack applicat
 ## Architecture
 HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google Books API
 
+**schema.sql** | Table name: books
+  - id - serial primary key
+  - author - author name
+  - title - title of the book
+  - isbn - the ISBN number associated with the title
+  - image_url - an image of the book cover
+  - description - a summary of what the book is about
+
 
 ## Change Log
+08-25-2020 ??pm - ?? 
 08-24-2020 11:30pm - Added CSS & index.ejs is homepage via "/"  
 08-24-2020 9:20pm - Added catch for error of app  
 08-24-2020 7:20pm - Sucessfully render search results from API    
@@ -63,3 +72,8 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 >Estimated time to complete: 5 minutes         
 >Start time: 11:30 PM | End time: 11:35 PM          
 >Actual time needed to complete: 5 minutes    
+
+>Number and Name of Feature: #1 Lab 12 | ??  
+>Estimated time to complete: 45 minutes         
+>Start time: ?? PM | End time: ?? PM          
+>Actual time needed to complete: 
