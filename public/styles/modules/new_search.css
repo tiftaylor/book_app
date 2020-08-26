@@ -1,0 +1,22 @@
+#newSearch div {
+  background-color: lightgray;
+}
+
+#newSearch > * {
+  border-radius: 3px;
+}
+
+#newSearch > div > label {
+  margin-left: 15px;
+  width: 60px;
+  display: inline-block;
+  color: black;
+}
+
+#newSearch input[type="text"]{
+  margin-top: 25px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  padding-left: 15px;
+}

@@ -1,0 +1,40 @@
+.resultBox {
+  box-sizing: border-box;
+  background-color: lightgray;
+  width: 85%;
+  margin-top: 2rem;
+  padding: 2rem 3rem;
+  border-radius: 3px;
+  box-shadow: 0 0 5px darkslategray;
+  color: black;
+  line-height: 1.4rem;
+}
+
+.resultBox h3 {
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px darkslategray;
+}
+
+.resultBox p {
+  margin-top: 15px;
+}
+
+.resultBox img {
+  border: 5px solid white;
+  width: 50%;
+}
+
+.resultBox a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  background-color: darkslategray;
+  height: 45px;
+  width: 50%;
+  display: inline-block;
+  line-height: 45px;
+  margin-top: 15px;
+  border-radius: 3px;
+}
