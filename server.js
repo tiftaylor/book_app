@@ -6,6 +6,7 @@ const superagent = require('superagent');
 const { response } = require('express');
 const pg = require('pg');
 require('dotenv').config();
+const methodOverride = require('method-override');
 
 
 // =================== Global Variables ===================== //
@@ -20,6 +21,7 @@ app.use(express.static('./public'));
 app.use(express.urlencoded({extended: true}));
 const client = new pg.Client(DATABASE_URL);
 client.on('error', (error) => console.error(error));
+app.use(methodOverride('_method'));
 
 
 // ===================== Routes ======================= //
@@ -28,9 +30,31 @@ app.get('/searches/new', newSearch);
 app.post('/searches', searchResults);
 app.get('/books/:bookid', bookDetails);
 app.post('/books', saveBook);
+app.put('/books/:bookid', updateDetails);
 
 
 // ========================== Route Handlers ============================ //
+function updateDetails (req, res) {
+  const body = req.body;
+  const SQL = `UPDATE books SET
+                title=$1,
+                author=$2,
+                isbn=$3,
+                image_url=$4,
+                summary=$5,
+                bookshelf=$6
+                WHERE id=$7`;
+  
+  const values = [body.title, body.author, body.isbn, body.image_url, body.summary, body.bookshelf, req.params.bookid];
+
+  client.query(SQL, values)
+    .then( () => {
+      res.redirect(`/books/${req.params.bookid}`);
+    })
+    .catch(console.error);
+}
+
+
 function homePage (req, res) {
   client.query(`SELECT id, image_url, title, author FROM books`)
     .then(dbResult => {
@@ -97,9 +121,17 @@ function bookDetails (req, res) {
   client.query(`SELECT * FROM books WHERE id = ${bookid}`)
     .then(dbResult => {
       const dbData = dbResult.rows;
-      res.render('pages/books/show', {
-        bookArray: dbData
-      });
+  
+      client.query(`SELECT DISTINCT bookshelf FROM books`)
+        .then(shelfData => {
+          console.log(shelfData);
+          res.render('pages/books/show', {
+            bookArray: dbData,
+            bookshelves: shelfData.rows
+          });
+        })
+
+      
     })
     .catch(error => errorHandler(error, res));
 }

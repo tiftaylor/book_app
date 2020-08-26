@@ -1,0 +1,22 @@
+<form id="update-form" class="invis" action="/books/<%= book.id %>?_method=PUT" method="POST">
+
+  <input type="text" name="author" value="<%= book.author %>">
+  <input type="text" name="title" value="<%= book.title %>">
+  <input type="text" name="isbn" value="<%= book.isbn %>">
+  <input type="text" name="image_url" value="<%= book.image_url %>">
+  <textarea name="summary" cols="30" rows="15"><%= book.summary %></textarea>
+
+  <select name="bookshelf" id="">
+    <% for (shelf of bookshelves) { %>
+      <% if (shelf.bookshelf === book.bookshelf) { %>
+        <option value="<%= shelf.bookshelf %>" selected><%= shelf.bookshelf %></option>
+      <% } else { %>
+        <option value="<%= shelf.bookshelf %>"><%= shelf.bookshelf %></option>
+      <% } %>
+    <% } %>
+  </select>
+
+  <input type="submit" value="Update Book">
+
+</form>
+  

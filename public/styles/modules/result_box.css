@@ -9,6 +9,7 @@
   box-shadow: 0 0 5px #1e2c2c;
   color: #1e2c2c;
   line-height: 1.4rem;
+  position: relative;
 }
 
 .resultBox h3 {
@@ -48,4 +49,15 @@
 .resultBox a:active {
   background-color: #306668;
   opacity: 0.8;
+}
+
+#update-form {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 3rem;
+  background-color: rgb(30 44 44 / 76%);
+  height: 100%;
+  box-sizing: border-box;
 }
