@@ -87,7 +87,7 @@ function saveBook (req, res) {
 
     res.redirect(`/books/${newID}`)
   })
-
+  .catch(error => errorHandler(error, res));
 }
 
 

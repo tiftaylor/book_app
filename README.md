@@ -28,6 +28,7 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 
 
 ## Change Log
+08-25-2020 8:15pm - Cleaned up code and added Partials via Layout dir
 08-25-2020 8:00pm - Ability to save a book to their local db 
 08-25-2020 7:00pm - View Details functionaity, path and render  
 08-25-2020 6:20pm - Saved Books Query & Render 
@@ -86,7 +87,12 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 >Start time: 6:30 PM | End time: 7:00 PM                
 >Actual time needed to complete: 30 minutes    
 
->Number and Name of Feature: #2 Lab 12 | View Details Functionality        
+>Number and Name of Feature: #3 Lab 12 | View Details Functionality        
 >Estimated time to complete: 1 hour                   
 >Start time: 7:00 PM | End time: 8:00 PM                    
 >Actual time needed to complete: 1 hour   
+
+>Number and Name of Feature: #4 Lab 12 | Cleanup & Layout          
+>Estimated time to complete: 30 minutes                     
+>Start time: 8:00 PM | End time: 8:15 PM                      
+>Actual time needed to complete: 15 minutes   

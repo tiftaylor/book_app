@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Show Results</title>
-
-  <link rel="stylesheet" href="../styles/reset.css">
-  <link rel="stylesheet" href="../styles/base.css">
-  <link rel="stylesheet" href="../styles/layout.css">
-  <link rel="stylesheet" href="../styles/modules.css">
-
-</head>
-
-<body>
-  
-  <header>
-    <nav>
-      <h1> <a href="/">Best Books!</a></h1>
-      <ul>
-        <li><a href="/searches/new">New Search</a></li>
-      </ul>
-    </nav>
-    
-  </header>
+<%- include('../../layout/top') %> 
 
   <main>
 
@@ -34,14 +10,4 @@
 
   </main>
 
-  <footer>
-    <ul>
-      <li>x</li>
-      <li>x</li>
-      <li>x</li>
-      <li>x</li>
-    </ul>
-  </footer>
-
-</body>
-</html>
+<%- include('../../layout/bottom') %>
