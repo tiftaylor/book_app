@@ -27,10 +27,19 @@
   <main>
     
     <div class="sub-header">
-      <h2>I am the index.ejs File</h2>
+      <h2> (<span><%= bookArray.length %></span>) Saved Books (Home Page)</h2>
     </div>
 
-  
+    <div class="resultContainer">
+      <% for (book of bookArray) { %>
+        <div class="resultBox">
+          <img src="<%= book.image_url %>" alt="">
+          <h3><%= book.title %></h3>
+          <p><%= book.author %></p>
+          <input type="submit" value="View Details">
+        </div>
+      <% } %>
+    </div>
 
   </main>
 

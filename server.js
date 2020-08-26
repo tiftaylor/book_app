@@ -4,11 +4,13 @@
 const express = require('express');
 const superagent = require('superagent');
 const { response } = require('express');
+const pg = require('pg');
 require('dotenv').config();
 
 
 // =================== Global Variables ===================== //
 const PORT = process.env.PORT || 3001;
+const DATABASE_URL = process.env.DATABASE_URL;
 const app = express();
 
 
@@ -16,6 +18,8 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
 app.use(express.urlencoded({extended: true}));
+const client = new pg.Client(DATABASE_URL);
+client.on('error', (error) => console.error(error));
 
 
 // ===================== Routes ======================= //
@@ -23,10 +27,17 @@ app.get('/', homePage);
 app.get('/searches/new', newSearch);
 app.post('/searches', searchResults);
 
+
 // ========================== Route Handlers ============================ //
 function homePage (req, res) {
-  res.render('pages/index');
-
+  client.query(`SELECT image_url, title, author FROM books`)
+    .then(dbResult => {
+      const dbData = dbResult.rows;
+      res.render('pages/index', {
+        bookArray: dbData
+      });
+    })
+    .catch(error => errorHandler(error, res));
 };
 
 
@@ -64,16 +75,18 @@ function searchResults (req, res) {
 
 // =================== Misc. Functions ===================== //
 function Book(obj) {
-  this.title = obj.volumeInfo.title;
-  this.author = obj.volumeInfo.authors;
-  this.summary = obj.volumeInfo.description;
+  const path = obj.volumeInfo;
 
-  let imgURL = obj.volumeInfo.imageLinks.thumbnail || 'https://i.imgur.com/J5LVHEL.jpg'
-  imgURL = imgURL.replace(/^http:\/\//i, 'https://');
+  this.title = path.title;
+  this.author = path.authors;
+  this.summary = path.description;
 
-  this.imgURL = imgURL;
-  this.isbn = obj.volumeInfo.industryIdentifiers;
-  this.bookshelf = obj.volumeInfo.categories;
+  let image_url = path.imageLinks && path.imageLinks.thumbnail ? path.imageLinks.thumbnail : 'https://i.imgur.com/J5LVHEL.jpg';
+  image_url = image_url.replace(/^http:\/\//i, 'https://');
+  this.image_url = image_url;
+
+  this.isbn = path.industryIdentifiers[0] ? path.industryIdentifiers[0].identifier : '';
+  this.bookshelf = path.categories;
 };
 
 
@@ -86,4 +99,7 @@ function errorHandler(error, res) {
 
 
 // =================== Start Server ===================== //
-app.listen(PORT, () => console.log('Ay! We\'re connected'));
+client.connect()
+  .then( () => {
+    app.listen(PORT, () => console.log('Ay! We\'re connected'));
+  });
