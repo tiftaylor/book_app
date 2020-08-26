@@ -1,8 +1,14 @@
 <div class="resultBox">
+  
   <img src="<%= book.image_url %>" alt="">
   <h3><%= book.title %></h3>
   <p><%= book.author %></p>
   <p><%= book.summary %></p>
   <p>ISBN: <%= book.isbn %></p>
   <p>Bookshelf: <%= book.bookshelf %></p>
+
+  <input type="submit" value="Update Details" id="update-details">
+
+  <%- include('edit') %>
+
 </div>
