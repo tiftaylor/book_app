@@ -26,6 +26,7 @@ client.on('error', (error) => console.error(error));
 app.get('/', homePage);
 app.get('/searches/new', newSearch);
 app.post('/searches', searchResults);
+app.get('/books/:bookid', bookDetails);
 
 
 // ========================== Route Handlers ============================ //
@@ -42,7 +43,7 @@ function homePage (req, res) {
 
 
 function newSearch (req, res) {
-  res.render('searches/new');
+  res.render('pages/searches/new');
 };
 
 
@@ -64,13 +65,26 @@ function searchResults (req, res) {
     .then(result => {
       const resultBodyItems = result.body.items;
 
-      res.render('searches/show', {
+      res.render('pages/searches/show', {
         bookArray: resultBodyItems.map(objInArray => new Book(objInArray))
       });
     })
     .catch(error => errorHandler(error, res));
 }
 
+
+function bookDetails (req, res) {
+  let bookid = req.params.bookid;
+
+  client.query(`SELECT * FROM books WHERE id = ${bookid}`)
+    .then(dbResult => {
+      const dbData = dbResult.rows;
+      res.render('pages/books/show', {
+        bookArray: dbData
+      });
+    })
+    .catch(error => errorHandler(error, res));
+}
 
 
 // =================== Misc. Functions ===================== //
