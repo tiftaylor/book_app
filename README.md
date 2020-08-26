@@ -28,6 +28,7 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 
 
 ## Change Log
+08-25-2020 8:00pm - Ability to save a book to their local db 
 08-25-2020 7:00pm - View Details functionaity, path and render  
 08-25-2020 6:20pm - Saved Books Query & Render 
 08-24-2020 11:30pm - Added CSS & index.ejs is homepage via "/"  
@@ -41,6 +42,7 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 - For solving the http to https I used this [StackOverflow Post](https://stackoverflow.com/questions/5491196/rewriting-http-url-to-https-using-regular-expression-and-javascript/5491311)
 - To help understand sticky footer, I used this persons [notes](https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/) on github
+- To grab the newest ID to load the result saved from the database, I used this [documentation](https://www.postgresql.org/docs/9.6/dml-returning.html) about RETURNING   
 
 
 ## User Acceptence Time Estimate Tests
@@ -83,3 +85,8 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 >Estimated time to complete: 2 hours               
 >Start time: 6:30 PM | End time: 7:00 PM                
 >Actual time needed to complete: 30 minutes    
+
+>Number and Name of Feature: #2 Lab 12 | View Details Functionality        
+>Estimated time to complete: 1 hour                   
+>Start time: 7:00 PM | End time: 8:00 PM                    
+>Actual time needed to complete: 1 hour   

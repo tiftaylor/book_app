@@ -27,11 +27,12 @@ app.get('/', homePage);
 app.get('/searches/new', newSearch);
 app.post('/searches', searchResults);
 app.get('/books/:bookid', bookDetails);
+app.post('/books', saveBook);
 
 
 // ========================== Route Handlers ============================ //
 function homePage (req, res) {
-  client.query(`SELECT image_url, title, author FROM books`)
+  client.query(`SELECT id, image_url, title, author FROM books`)
     .then(dbResult => {
       const dbData = dbResult.rows;
       res.render('pages/index', {
@@ -73,6 +74,23 @@ function searchResults (req, res) {
 }
 
 
+function saveBook (req, res) {
+  const {author, title, isbn, image_url, summary, bookshelf} = req.body;
+
+  const addData = `INSERT INTO books
+    (author, title, isbn, image_url, summary, bookshelf)
+    VALUES($1, $2, $3, $4, $5, $6) RETURNING id`;
+  const valueArray = [author, title, isbn, image_url, summary, bookshelf];
+
+  client.query(addData, valueArray).then((dbResult) => {
+    const newID = dbResult.rows[0].id;
+
+    res.redirect(`/books/${newID}`)
+  })
+
+}
+
+
 function bookDetails (req, res) {
   let bookid = req.params.bookid;
 
@@ -99,7 +117,7 @@ function Book(obj) {
   image_url = image_url.replace(/^http:\/\//i, 'https://');
   this.image_url = image_url;
 
-  this.isbn = path.industryIdentifiers[0] ? path.industryIdentifiers[0].identifier : '';
+  this.isbn = path.industryIdentifiers[1] ? path.industryIdentifiers[1].identifier : '';
   this.bookshelf = path.categories;
 };
 
