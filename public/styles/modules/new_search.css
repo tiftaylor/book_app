@@ -1,5 +1,5 @@
 #newSearch div {
-  background-color: lightgray;
+  background-color: #d1e1e1;
 }
 
 #newSearch > * {
@@ -19,4 +19,5 @@
   box-sizing: border-box;
   font-size: 1.2rem;
   padding-left: 15px;
+  border: 1px solid #1e2c2c;
 }

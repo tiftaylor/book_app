@@ -1,20 +1,21 @@
 .resultBox {
   box-sizing: border-box;
-  background-color: lightgray;
+  background-color: #d1e1e1;
   width: 85%;
   margin-top: 2rem;
-  padding: 2rem 3rem;
-  border-radius: 3px;
-  box-shadow: 0 0 5px darkslategray;
-  color: black;
+  margin-bottom: 1rem;
+  padding: 2rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #1e2c2c;
+  color: #1e2c2c;
   line-height: 1.4rem;
 }
 
 .resultBox h3 {
   font-weight: bold;
-  color: white;
+  color: #1e2c2c;
   font-size: 1.2rem;
-  text-shadow: 1px 1px 3px darkslategray;
+  margin-top: 10px;
 }
 
 .resultBox p {
@@ -30,11 +31,21 @@
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
-  background-color: darkslategray;
+  background-color: #4a9699;
   height: 45px;
   width: 50%;
   display: inline-block;
   line-height: 45px;
   margin-top: 15px;
   border-radius: 3px;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.resultBox a:hover {
+  background-color: #306668;
+}
+
+.resultBox a:active {
+  background-color: #306668;
+  opacity: 0.8;
 }

@@ -3,11 +3,11 @@ body {
 }
 
 main {
-  background-color: rgb(136, 152, 168);
+  background-color: #e7fcfc;
 }
 
 .sub-header {
-  background-color: gray;
+  background-color: #4a9699;
   padding: 1.2rem 0;
 }
 
@@ -20,10 +20,18 @@ div > h2 {
 }
 
 input[type="submit"]{
-  background-color: darkslategray;
+  background-color: #4a9699;
   color: white;
   border: none;
   font-size: 1.2rem;
+  transition: background-color 0.3s, opacity 0.3s;
 }
 
+input[type="submit"]:hover {
+  background-color: #306668;
+}
 
+input[type="submit"]:active {
+  background-color: #306668;
+  opacity: 0.8;
+}
