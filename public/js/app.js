@@ -1,15 +1,12 @@
 'use strict';
 
-// on click 
-// show form by toggling a class
-
+// =================== Global Variables ========================//
 const detailsbtn = document.querySelector('#update-details');
-console.log(detailsbtn);
 
+
+// =================== Event Listeners ========================//
 detailsbtn.addEventListener('click', () => {
   const form = document.querySelector('#update-form');
-  console.log(form);
-  console.log(form.classList);
   form.classList.remove('invis');
-  console.log(form.classList);
 })
+
