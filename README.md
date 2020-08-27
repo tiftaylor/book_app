@@ -1,7 +1,7 @@
 # Search Google Books App | Lab 11 - 14 | Code Fellows 301
 
 **Author**: Tif Taylor  
-**Version**: 3.1.0  
+**Version**: 3.2.0  
 **Heroku URL**: [https://tiftaylor-booklist.herokuapp.com/](https://tiftaylor-booklist.herokuapp.com/)
 
 
@@ -30,6 +30,7 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 
 
 ## Change Log
+08-26-2020 5:22pm - Ability to delete a book from the details view     
 08-26-2020 4:45pm - Ability to update book details to user preference  
 08-25-2020 10:00pm - Added CSS, including hamburger and final touches  
 08-25-2020 8:15pm - Cleaned up code and added Partials via Layout dir  
@@ -51,6 +52,7 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 - To grab the newest ID to load the result saved from the database, I used this [documentation](https://www.postgresql.org/docs/9.6/dml-returning.html) about RETURNING   
 - Bulk of Hamburger specific CSS credit: [Erik Terwan](https://codepen.io/erikterwan/pen/EVzeRP). However, I did a lot of manual adjusting for my app use like removing his animation, adjusting positioning to suit my app, etc. 
 - Button transition animation I used [this SO post](https://stackoverflow.com/questions/9670075/css-transition-shorthand-with-multiple-properties)  
+- To recall how to remove a class using vanilla JS I used this [SO Post](https://stackoverflow.com/questions/51992229/how-can-i-add-remove-class-on-a-second-element-with-vanilla-js)
 
 
 ## User Acceptence Time Estimate Tests
@@ -113,3 +115,8 @@ HTML > CSS > JavaScript > Express > Node.js > Superagent pkg > EJS pkg > Google 
 >Estimated time to complete: 1.5 hours                       
 >Start time: 1:45 PM | End time: 4:45 PM                          
 >Actual time needed to complete: 3 hours
+
+>Number and Name of Feature: #2 Lab 13 | Delete Book            
+>Estimated time to complete: 1 hours                        
+>Start time: 5:00 PM | End time: 5:22 PM                            
+>Actual time needed to complete: 22 minutes   

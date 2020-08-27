@@ -31,9 +31,22 @@ app.post('/searches', searchResults);
 app.get('/books/:bookid', bookDetails);
 app.post('/books', saveBook);
 app.put('/books/:bookid', updateDetails);
+app.delete('/books/:bookid', deleteBook);
 
 
 // ========================== Route Handlers ============================ //
+function deleteBook (req, res) {
+  const id = req.params.bookid;
+  const SQL = 'DELETE FROM books WHERE id=$1';
+
+  client.query(SQL, [id])
+    .then( () => {
+      res.redirect('/');
+    })
+    .catch(error => errorHandler(error, res));
+}
+
+
 function updateDetails (req, res) {
   const body = req.body;
   const SQL = `UPDATE books SET
@@ -51,7 +64,7 @@ function updateDetails (req, res) {
     .then( () => {
       res.redirect(`/books/${req.params.bookid}`);
     })
-    .catch(console.error);
+    .catch(error => errorHandler(error, res));
 }
 
 
